@@ -1,0 +1,362 @@
+:root {
+    --cor-1: #C0F8DA;
+    --cor-2: #68D1A5;
+    --cor-3: #30B27B;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #F8F9FB;
+}
+
+.header__window {
+    background: var(--cor-3) url(../components/images/IMG_header.jpg) center center / cover no-repeat fixed;
+    height: 100vh;
+}
+
+.header {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px 30px;
+    top: 0;
+    position: sticky;
+    box-sizing: border-box;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.container__img {
+    width: 50px;
+    display: inline-block;
+}
+
+.container__logo {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.container__logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav__menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.menu__item {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 1.3em;
+}
+
+.menu__item a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+/* hover animation */
+.menu__item a:before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    right: 100%;
+    bottom: 50%;
+    background: #fff;
+    height: 2px;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.menu__item a:hover {
+    opacity: 1 !important;
+}
+
+.menu__item a:hover:before {
+    right: 0;
+}
+
+.menu__item a:before {
+    bottom: -5%;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#quemSomos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    box-shadow: 7px 7px 10px #0002;
+}
+
+.quemSomos__img {
+    width: 45%;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.quemSomos__content {
+    position: relative;
+    width: 55%;
+    padding: 20px 70px 70px;
+    display: inline-block;
+    background-color: #30B27B;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.quemSomos__title {
+    font-size: 3.2em;
+    margin-bottom: 60px;
+}
+
+.quemSomos__p {
+    font-size: 1.3em;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+.quemSomos__logo {
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+#metodologia {
+    padding: 0 20px;
+    margin-top: 150px;
+}
+
+.metodologia__title {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.metodologia__subtitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #30B27B;
+    margin: 10px 0 40px;
+}
+
+.metodologia__cards {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 2%;
+}
+
+.card {
+    box-shadow: 0 0 50px #5d8d7431;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.card__number {
+    font-size: 2.5em;
+    color: #ccc;
+    padding: 0 15px;
+    margin: 20px 0 5px 0;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__title {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #68D1A5;
+    padding: 0 15px;
+}
+
+.card__text {
+    font-size: 1.2em;
+    padding: 0 15px;
+}
+
+#avaliacao {
+    padding: 0 20px;
+    margin-top: 150px;
+}
+
+.avaliacao__title {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.avaliacao__subtitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--cor-3);
+    margin: 10px 0 40px;
+}
+
+.avaliacao__carousel{
+    position: relative;  
+    height: 450px;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-3);
+}
+
+.swiper{
+    width: 90%;
+    height: 350px;
+}
+
+.carousel__card {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.avaliacao__perfil {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.avaliacao__nome {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.avaliacao__estrelas img {
+    width: 15px;
+    margin-bottom: 10px;
+}
+
+.avaliacao__texto {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+    opacity: 0.7;
+    color: var(--cor-1);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    opacity: 1;
+    color: #fff;
+}
+
+.swiper-pagination-bullet::after {
+    color: #fff;
+}
+
+#contato {
+    padding-bottom: 35px;
+    margin-top: 150px;
+    background-color: #F8F9FB;
+}
+
+.contato__title {
+    box-shadow: 7px 7px 10px #0002;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 80px 0;
+    background-color: var(--cor-3);
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.3em;
+}
+
+.contato__cards {
+    padding:  0 20px;
+}
+
+.card__container {
+    text-decoration: none;
+}
+
+.contato__cards {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 2%;
+}
+
+.contato__card {
+    display: flex;
+    height: 350px;
+    flex-direction: column;
+    align-content: space-between;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    transition: .4s cubic-bezier(0,.37,1,.63);
+}
+
+.contato__card:hover {
+    box-shadow: 0 0 50px #5d8d7450;
+    cursor: pointer;
+}
+
+.contato__icon {
+    font-size: 2.5em;
+    color: #666;
+}
+
+.contato__subtitle {
+    font-size: 2em;
+    color: var(--cor-3);
+    margin: 25px 0;
+}
+
+.contato__text {
+    color: #666;
+    font-size: 1.2em;
+    flex-grow: 2;
+}
+
+.contato__link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 150px;
+    height: 70px;
+    background-color: var(--cor-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer__text {
+    color: #fff;
+}
